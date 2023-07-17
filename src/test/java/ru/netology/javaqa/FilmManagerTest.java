@@ -6,23 +6,23 @@ import org.junit.jupiter.api.Test;
 public class FilmManagerTest {
 
     @Test
-    public void findAllEmpty(){
+    public void findAllEmpty() {
         FilmManager manager = new FilmManager();
 
         String[] expected = {};
         String[] actual = manager.findAll();
-        Assertions.assertArrayEquals( expected,actual);
+        Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void findAllOne(){
+    public void findAllOne() {
         FilmManager manager = new FilmManager();
 
         manager.add("Фильм1");
 
         String[] expected = {"Фильм1"};
         String[] actual = manager.findAll();
-        Assertions.assertArrayEquals( expected,actual);
+        Assertions.assertArrayEquals(expected, actual);
 
     }
 
@@ -49,7 +49,7 @@ public class FilmManagerTest {
         manager.add("Фильм3");
         manager.add("Фильм7");
 
-        String[] expected = {"Фильм1", "Фильм2", "Фильм4","Фильм3","Фильм7"};
+        String[] expected = {"Фильм1", "Фильм2", "Фильм4", "Фильм3", "Фильм7"};
         String[] actual = manager.findAll();
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -63,7 +63,7 @@ public class FilmManagerTest {
         manager.add("Фильм3");
         manager.add("Фильм4");
 
-        String[] expected = {"Фильм4", "Фильм3", "Фильм2","Фильм1"};
+        String[] expected = {"Фильм4", "Фильм3", "Фильм2", "Фильм1"};
         String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
